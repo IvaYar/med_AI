@@ -9,3 +9,9 @@ Thumbs.db
 .idea/
 .vscode/
 *~
+
+# Local MRI datasets and generated YOLO artifacts
+/main_project/dataset/
+/main_project/data/
+/main_project/runs/
+/main_project/*.pt

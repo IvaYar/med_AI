@@ -1,0 +1,8 @@
+# Paths are relative to this file; path is intentionally omitted.
+train: data/images/train
+val: data/images/val
+test: data/images/test
+names:
+  0: glioma
+  1: meningioma
+  2: pituitary

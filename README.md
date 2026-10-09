@@ -25,15 +25,10 @@ training, predictions, and performance evaluation are planned next.
 
 ### GitHub Snapshot and Local Workspace
 
-As of this README update, the preparation implementation in `main_project/` is
-available in the project owner's local workspace and **has not yet been committed
-to this GitHub repository**. This update publishes the project documentation only.
-
-The structure and run instructions below describe that local implementation.
-Cloning the repository alone does not currently provide these scripts. Team
-members need the `main_project` source files from the project owner before running
-them. Publishing those source files is a separate next step. The dataset and
-Python environment must be set up separately on each machine.
+The preparation source files in `main_project/` are included in this repository.
+Cloning it provides the scripts, dependency list, and dataset configuration.
+The dataset, prepared image/label copies, and Python environment are local files
+and must be set up separately on each machine using the instructions below.
 
 ## Project Workspace
 
@@ -157,8 +152,6 @@ cd med_AI
 code .
 ```
 
-Before continuing, make sure the `main_project` source files are present locally.
-Obtain them from the project owner until they are published on GitHub.
 From a terminal at the repository root, run:
 
 ```powershell
@@ -300,7 +293,7 @@ current scope, and no detection accuracy claims have been made.
 
 Team members should use the same source dataset version, dependency versions,
 class mapping, and seed to reproduce the current preparation results. Share
-source code through GitHub once it is published; download the dataset separately
+source code through GitHub; download the dataset separately
 and recreate `.venv/` and prepared `data/` locally. Keep environments, dataset
 archives, generated images, and future model weights out of source commits.
 
@@ -316,11 +309,10 @@ and any new annotation issues in the review.
 
 ## Next Steps
 
-1. Publish the preparation source files so every team member can reproduce the setup.
-2. Review the flagged annotation conflicts and agree on their treatment.
-3. Add YOLOv8n model initialization and a reproducible training configuration.
-4. Evaluate the trained model, then run predictions with visible bounding boxes.
-5. Analyze errors and document results using the held-out test split.
+1. Review the flagged annotation conflicts and agree on their treatment.
+2. Add YOLOv8n model initialization and a reproducible training configuration.
+3. Evaluate the trained model, then run predictions with visible bounding boxes.
+4. Analyze errors and document results using the held-out test split.
 
 Reference model documentation:
 [Ultralytics YOLOv8](https://docs.ultralytics.com/models/yolov8/).
