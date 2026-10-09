@@ -9,9 +9,9 @@ short initials.
 
 ## Team
 
-TEAM-NAME: [Choose a 2–32 character team name.]
-MEMBER-LABELS: [List each member's first name or initials, separated by commas.]
-TEAM-WORK: [Explain how the team will rotate commands, review decisions, and report problems that stop progress.]
+TEAM-NAME: MRI-Team-WYK
+MEMBER-LABELS: Wan, Yaromir, Kareem
+TEAM-WORK: rotate commands- Wan, review decisions- Yaromir, report problems that stop progress- Kareem.
 
 ## Fixed Course Facts
 
@@ -27,16 +27,16 @@ These are supplied facts, not questions. Do not rewrite them.
 
 ## Project Boundary
 
-SYSTEM-DOES: [In one sentence, describe the MRI input, object-detection action, and returned result.]
-SYSTEM-DOES-NOT: [In one sentence, state one medical or automatic-decision claim the workflow must not make.]
-REVIEWER: [State that a designated human reviewer receives and reviews every model output.]
+SYSTEM-DOES: The system receives brain-tumor MRI medical images, detects and classifies glioma, meningioma, and pituitary tumor regions, and outputs suspicious tumor bounding boxes as an auxiliary reference for radiologists.
+SYSTEM-DOES-NOT: The system does not replace professional radiological diagnosis and can only act as an auxiliary screening tool.
+REVIEWER: Radiologists receive and review suspicious tumor bounding boxes as an auxiliary reference for subsequent clinical diagnosis.
 
 ## Risk And Testable Behaviour
 
-RISK: [Describe one specific thing that could go wrong.]
-RESPONSE: [State what the team or workflow will do when that risk occurs.]
-TESTABLE-BEHAVIOUR: [Write one Given–When–Then example with an observable result.]
+RISK: The detector may produce false bounding boxes on normal brain structures, such as blood vessels and cerebral gyri, because of massive no tumor negative samples.
+RESPONSE: The project suppresses false positives through negative-sample sampling and inference-stage threshold adjustment and assesses the false-positive quantity.
+TESTABLE-BEHAVIOUR: Given the no tumor negative samples, When controlled experiments with threshold adjustment are conducted, Then performance is assessed using mAP@0.5, Precision, Recall, F1-score, and false-positive quantity.
 
 ## Initial Contributions
 
-INITIAL-CONTRIBUTIONS: [List every member label and one first contribution for this lab.]
+INITIAL-CONTRIBUTIONS:
